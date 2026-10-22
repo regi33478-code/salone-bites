@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search and filter local Sierra Leonean dishes and restaurants.">
+    <title>Explore Food | Salone Bites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main navigation header -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main">
+            <a href="index.html" class="logo">SALONE BITES</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="explore.html" class="active" aria-current="page">Explore</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="explore-page">
+        <h1>Explore food</h1>
+        <p class="subtitle">Find local dishes and restaurants.</p>
+
+        <!-- Search input box -->
+        <form class="food-search" role="search" onsubmit="return false;">
+            <label for="food-search-input" class="sr-only">Search for a dish, restaurant or location</label>
+            <input type="search" id="food-search-input" name="q" placeholder="Search for a dish, restaurants or location...">
+            <button type="submit" aria-label="Search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/></svg>
+            </button>
+        </form>
+
+        <!-- Category selector buttons -->
+        <div class="food-categories" role="group" aria-label="Food categories">
+            <button type="button" class="category-button selected" aria-pressed="true">All</button>
+            <button type="button" class="category-button" aria-pressed="false">Rice</button>
+            <button type="button" class="category-button" aria-pressed="false">Soups</button>
+            <button type="button" class="category-button" aria-pressed="false">Grilled</button>
+        </div>
+
+        <div class="explore-layout">
+
+            <!-- Sidebar filter section -->
+            <aside class="filters" aria-labelledby="filters-heading">
+                <h2 id="filters-heading">Filters</h2>
+
+                <fieldset>
+                    <legend>Cuisine type</legend>
+                    <label><input type="checkbox" id="traditional" name="traditional"> Traditional</label>
+                    <label><input type="checkbox" id="seafood" name="seafood"> Seafood</label>
+                    <label><input type="checkbox" id="vegetarian" name="vegetarian"> Vegetarian</label>
+                    <label><input type="checkbox" id="meat" name="meat"> Meat</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Location</legend>
+                    <label><input type="checkbox" id="freetown" name="freetown"> Freetown</label>
+                    <label><input type="checkbox" id="aberdeen" name="aberdeen"> Aberdeen</label>
+                    <label><input type="checkbox" id="lumley" name="lumley"> Lumley</label>
+                </fieldset>
+            </aside>
+
+            <!-- Food result cards -->
+            <section class="food-results">
+                <h2>Food results</h2>
+                <div class="card-grid">
+                <article class="food-card">
+                    <img class="card-image" src="images/jollof.jpg" alt="Jollof rice served with grilled chicken and salad">
+                    <h3>Jollof Rice</h3>
+                    <p>Discover this popular rice dish.</p>
+                </article>
+
+                <article class="food-card">
+                    <img class="card-image" src="images/cassava.jpg" alt="Cassava leaf stew served over rice">
+                    <h3>Cassava Leaf</h3>
+                    <p>A favourite Sierra Leonean dish.</p>
+                </article>
+
+                <article class="food-card">
+                    <img class="card-image" src="images/groundnut.jpg" alt="Groundnut stew with white rice">
+                    <h3>Groundnut Stew</h3>
+                    <p>A rich, comforting local stew.</p>
+                </article>
+                
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="site-footer">
+        <a href="index.html" class="footer-logo">SALONE BITES</a>
+        <nav class="footer-links" aria-label="Footer">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html#map">Location</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Salone Bites. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

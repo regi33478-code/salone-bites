@@ -1,0 +1,756 @@
+/* =========================================================
+   MY WEBSITE RESET AND BASIC STYLES
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7F4EC;
+    color: #292929;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================================
+   HEADER AND NAVIGATION BAR
+   ========================================================= */
+.site-header {
+    background-color: #292735;
+    color: #ffffff;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo,
+.footer-logo {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d6c7a5;
+}
+
+/* =========================================================
+   IMAGE SETTINGS (all photos are <img> tags with alt text)
+   ========================================================= */
+.hero-image,
+.card-image,
+.about-image,
+.mission-image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    background-color: #D9D9D9;
+}
+
+/* Visually hidden text that screen readers can still read */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Keyboard focus outline */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #d6c7a5;
+    outline-offset: 2px;
+}
+
+/* =========================================================
+   HOME PAGE STYLES (index.html)
+   ========================================================= */
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-content h1 {
+    font-size: clamp(30px, 3.5vw, 44px);
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    max-width: 420px;
+    margin-bottom: 22px;
+    font-size: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #252733;
+    color: #ffffff;
+    padding: 11px 22px;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #454958;
+}
+
+.hero-image {
+    height: 280px;
+    border-radius: 3px;
+}
+
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 35px;
+}
+
+.content-section h2 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+/* Grid layout for dish cards and restaurant cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.food-card,
+.restaurant-card {
+    padding: 10px;
+    border: 1px solid #e1ddd3;
+    background-color: #FFFFFF;
+    border-radius: 3px;
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 12px;
+    border-radius: 2px;
+}
+
+.food-card h3,
+.restaurant-card h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.food-card p,
+.restaurant-card p {
+    color: #626262;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.card-link {
+    display: inline-block;                        
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.card-link:hover {
+    color: #77704e;
+}
+
+.restaurants-section {
+    padding-top: 5px;
+    padding-bottom: 45px;
+}
+
+/* =========================================================
+   ABOUT PAGE STYLES (about.html)
+   ========================================================= */
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.about-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 45px 0;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.about-text p,
+.mission-text p,
+.why-section p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.about-image {
+    height: 280px;
+}
+
+.about-divider {
+    height: 8px;
+    background-color: #292735;
+    margin: 10px 0 35px;
+}
+
+.mission-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding-bottom: 25px;
+}
+
+.mission-image {
+    height: 280px;
+}
+
+.mission-text h2,
+.why-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.why-section {
+    padding: 0 0 55px;
+}
+
+.why-section p {
+    max-width: 850px;
+}
+
+/* =========================================================
+   EXPLORE PAGE STYLES (explore.html)
+   ========================================================= */
+.explore-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 30px 50px;
+}
+
+.explore-page > h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.explore-page > .subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.food-search {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 46px;
+}
+
+.food-search input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #D9D9D9;
+    background-color: #D9D9D9;
+}
+
+::placeholder {
+    color: #555555;
+    opacity: 1;
+}
+
+.food-search button {
+    width: 48px;
+    border: none;
+    background-color: #292735;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-search button svg {
+    width: 22px;
+    height: 22px;
+}
+
+.food-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.category-button {
+    flex: 1 1 90px;
+    max-width: 160px;
+    padding: 12px 20px;
+    border: none;
+    background-color: #D9D9D9;
+    color: #292735;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.category-button.selected {
+    background-color: #292735;
+    color: white;
+}
+
+/* Sidebar filter and food results layout */
+.explore-layout {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+.filters {
+    border-right: 6px solid #292735;
+    padding-right: 18px;
+    min-height: 430px;
+}
+
+.filters h2,
+.food-results h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.filters fieldset {
+    border: none;
+    margin-bottom: 10px;
+}
+
+.filters legend {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.filters label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.filters input {
+    width: 18px;
+    height: 18px;
+    accent-color: #292735;
+}
+
+.food-results {
+    min-width: 0;
+}
+
+.food-results .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* =========================================================
+   SERVICES PAGE STYLES (services.html)
+   ========================================================= */
+.services-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 30px 50px;
+}
+
+.services-page > h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+/* 2x2 grid layout for service boxes */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.service-card {
+    background-color: #d4d2e1;
+    padding: 30px 25px;
+    min-height: 160px;
+    border-radius: 2px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #292735;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #292929;
+}
+
+/* How it works 1-2-3 step section styling */
+.how-it-works h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.steps-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    text-align: center;
+}
+
+.step {
+    flex: 1;
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    background-color: #292735;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-weight: bold;
+}
+
+.step-arrow {
+    font-size: 28px;
+    font-weight: bold;
+    color: #292735;
+    padding-bottom: 25px;
+}
+
+.step h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.step p {
+    font-size: 13px;
+    color: #555555;
+}
+
+/* =========================================================
+   CONTACT PAGE STYLES (contact.html)
+   ========================================================= */
+.contact-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 30px 50px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    padding-right: 30px;
+}
+
+.contact-info h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-info address {
+    font-style: normal;
+}
+
+.contact-info a:hover {
+    color: #77704e;
+}
+
+.contact-info p {
+    font-size: 15px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.contact-form-container {
+    border-left: 4px solid #292735;
+    padding-left: 35px;
+}
+
+.contact-form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #d4d2e1;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #292735;
+    color: #ffffff;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.map-container {
+    width: 100%;
+    height: 260px;
+    background-color: #d4d2e1;
+    overflow: hidden;
+    scroll-margin-top: 20px;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* =========================================================
+   FOOTER SECTION (COMMON TO ALL PAGES)
+   ========================================================= */
+.site-footer {
+    background-color: #292735;
+    color: #ffffff;
+    padding: 25px max(30px, calc((100% - 1200px) / 2 + 30px));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #d6c7a5;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #d0d0d0;
+    padding-top: 10px;
+    border-top: 1px solid #454650;
+}
+
+/* =========================================================
+   RESPONSIVE LAYOUT - TABLET (max 768px) AND MOBILE (max 520px)
+   ========================================================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* Two-column sections stack into one column */
+    .hero,
+    .about-intro,
+    .mission-section,
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    .hero-image,
+    .about-image,
+    .mission-image {
+        height: 220px;
+    }
+
+    .contact-form-container {
+        border-left: none;
+        border-top: 4px solid #292735;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .contact-info {
+        padding-right: 0;
+    }
+
+    /* Cards go to two per row */
+    .card-grid,
+    .food-results .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .card-image {
+        height: 140px;
+    }
+
+    .explore-layout {
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 520px) {
+    .navbar {
+        padding: 18px 16px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 30px 18px;
+    }
+
+    .about-page,
+    .content-section,
+    .explore-page,
+    .services-page,
+    .contact-page {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero-image,
+    .about-image,
+    .mission-image {
+        height: 200px;
+    }
+
+    .card-grid,
+    .food-results .card-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .steps-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg);
+        padding-bottom: 0;
+        margin: 5px 0;
+    }
+
+    .explore-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        border-right: none;
+        border-bottom: 4px solid #292735;
+        padding: 0 0 18px;
+        min-height: auto;
+    }
+
+    .site-footer {
+        padding: 25px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .copyright {
+        text-align: left;
+    }
+}
