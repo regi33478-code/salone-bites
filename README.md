@@ -1,4 +1,4 @@
-# 🍲 Salone Bites
+# Salone Bites
 
 **A Local Food and Restaurant Discovery Website for Sierra Leone**
 
